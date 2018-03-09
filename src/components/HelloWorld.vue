@@ -1,25 +1,33 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    
-    
-  </div>
+    <div>
+      <button v-on:click="show = !show">
+      点击我
+    </button>
+    <transition name="false">
+        <p v-if="show">
+          哟！小伙子你真棒~
+        </p>
+    </transition>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      msg: '这是第一个vue cli'
-    }
+      msg: "这是第一个vue cli",
+      show: true
+    };
+    
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
