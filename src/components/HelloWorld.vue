@@ -25,6 +25,10 @@
     
     <input v-model="message">
 
+    <div class="">
+
+    </div>
+
 
     </div>
 </template>
