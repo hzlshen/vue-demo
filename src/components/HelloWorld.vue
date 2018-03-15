@@ -31,6 +31,11 @@
     <!-- 这是帮两个 -->
     <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError}"></div>
 
+    <!-- 事件处理 -->
+    <button v-on:click="counter += 1">递增加1</button>
+    <p>加{{counter}}</p>
+
+     <button v-on:click="greet">弹框</button>
 
     </div>
 </template>
@@ -50,13 +55,25 @@ export default {
         { to: "这是个text3" },
         { to: "这是个text4" }
       ],
-      isActive:true,
-      hasError:false,
+      name:"小伙子",
+      isActive: true,
+      hasError: false,
+      counter:0,
+      classObject: {
+        active: true,
+        "text-danger": true
+      }
     };
   },
-  methods:{
-    Click:function(){
-      this.see =false
+  methods: {
+    Click: function() {
+      this.see = false;
+    },
+    greet:function(e){
+      alert("你好"+this.name+"!");
+      if(e){
+        alert(e.target.tagName);
+      }
     }
   }
 };
@@ -64,10 +81,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .active{
-      color: yellow;
-    }
-    .text-danger{
-      background: #111;
-    }
+.active {
+  color: red;
+}
+.text-danger {
+  background: #111;
+}
 </style>
