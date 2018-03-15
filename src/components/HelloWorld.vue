@@ -10,7 +10,7 @@
     </transition>
 
     <span v-bind:title="message">
-      鼠标悬停几秒钟查看此处动态绑定的提示信息！ 
+      鼠标悬停几秒钟查看此处动态绑定的提示信息！
     </span>
 
     <p v-if="see">看到我了吧</p>
@@ -22,7 +22,7 @@
     </ul>
 
     <button v-on:click="Click">点击隐藏</button>
-    
+
     <input v-model="message">
 
     <div v-bind:class="{ active:isActive } ">
@@ -36,6 +36,14 @@
     <p>加{{counter}}</p>
 
      <button v-on:click="greet">弹框</button>
+
+      <div class="news">
+          sjdgwsfkljsdkj
+
+      </div>
+
+
+
 
     </div>
 </template>
@@ -73,6 +81,14 @@ export default {
       alert("你好"+this.name+"!");
       if(e){
         alert(e.target.tagName);
+
+      }
+      if(2 == '2'){
+        console.log(111111111)
+      }
+
+      if(3 === '3'){
+
       }
     }
   }
@@ -86,5 +102,16 @@ export default {
 }
 .text-danger {
   background: #111;
+  color: #f00;
+  font-size: 24px;
+  opacity: 1;
+  display: block;
+  border: 1px solid #a00;
+
+
+}
+.news{
+  color: #fff;
+  font-size: 20px;
 }
 </style>
