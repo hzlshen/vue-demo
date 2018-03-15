@@ -25,9 +25,11 @@
     
     <input v-model="message">
 
-    <div class="">
-
+    <div v-bind:class="{ active:isActive } ">
+      这是个vbind
     </div>
+    <!-- 这是帮两个 -->
+    <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError}"></div>
 
 
     </div>
@@ -48,6 +50,8 @@ export default {
         { to: "这是个text3" },
         { to: "这是个text4" }
       ],
+      isActive:true,
+      hasError:false,
     };
   },
   methods:{
@@ -60,5 +64,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .active{
+      color: yellow;
+    }
+    .text-danger{
+      background: #111;
+    }
 </style>
