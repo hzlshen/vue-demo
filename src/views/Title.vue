@@ -1,6 +1,6 @@
 <template>
   <div>
-    这是商品列表页面{{msg}}
+    这是商品标题子组件{{msg}}
     {{$route.params.goodsId}}
   </div>
 </template>
