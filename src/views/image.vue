@@ -1,6 +1,6 @@
 <template>
   <div v-show="before">
-    这是商品图片的子组件{{msg}}
+    子组件{{msg}}
     {{$route.params.goodsId}}
   </div>
 </template>
