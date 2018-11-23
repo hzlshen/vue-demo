@@ -10,7 +10,7 @@
   export default{
     data(){
       return {
-        msg:"你好世界",
+        msg:"hello",
         before:true
       }
     }
